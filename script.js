@@ -1,11 +1,12 @@
 "use strict";
 let discount = +prompt(
-    "Выберите пиццу (1 - фирменная, 2 - с курицей и ананасом, 3 - четыре сыра, 4 - пеперони):"
-  );
-let count = +prompt('Введите количество пицц:');
-let order = '';
+  "Выберите пиццу (1 - фирменная, 2 - с курицей и ананасом, 3 - четыре сыра, 4 - пеперони):"
+);
+let count = +prompt("Введите количество пицц:");
+
 function orderingPizza(t = 1, n = 1) {
-  switch (discount) {
+  let order = "";
+  switch (t) {
     case 1:
       order = "фирменнная";
       break;
@@ -23,8 +24,7 @@ function orderingPizza(t = 1, n = 1) {
       alert("Извините, произошла ошибка.");
       break;
   }
+  return "Ваш заказ:" + "<br>" + "Пицца: " + order + "<br>" + "Количество: " + n + " шт.";
 }
 
-orderingPizza();
-
-document.write('Ваш заказ:' + '<br>' + 'Пицца: ' + order + '<br>' + 'Количество: ' + count + 'шт.');
+document.write(orderingPizza(discount, count));
