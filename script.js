@@ -1,13 +1,13 @@
 "use strict";
 let discount = +prompt(
-    "Выберите пиццу (1 - с грибами, 2 - с курицей и ананасом, 3 - четыре сыра, 4 - пеперони):"
+    "Выберите пиццу (1 - фирменная, 2 - с курицей и ананасом, 3 - четыре сыра, 4 - пеперони):"
   );
 let count = +prompt('Введите количество пицц:');
 let order = '';
-function orderingPizza(t, n) {
+function orderingPizza(t = 1, n = 1) {
   switch (discount) {
     case 1:
-      order = "с грибами";
+      order = "фирменнная";
       break;
     case 2:
       order = "с курицей и ананасом";
